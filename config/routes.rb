@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
-  get 'poems/show'
-  get 'poems/index'
-  get 'poets/show'
-  get 'poets/index'
+  resources :poems, only: [:show, :index]
+  resources :poets, only [:show, :index] do
+    resouces :poems, only: [:show, :index]
+  end
   devise_for :users
   root to: 'pages#home'
+  get 'pages/about'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
