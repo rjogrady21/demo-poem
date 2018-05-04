@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :poems, only: [:show, :index]
-  resources :poets, only [:show, :index] do
-    resouces :poems, only: [:show, :index]
+  resources :poets, only: [:show, :index] do
+    resources :poems, only: [:show, :index]
   end
   devise_for :users
   root to: 'pages#home'
