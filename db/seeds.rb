@@ -19,7 +19,7 @@ puts "seeding poets"
 
 Poet.create(
   name: "Philip Larkin",
-  date_of_birth: 1922,
+  year_of_birth: 1922,
   biography: "Philip Arthur Larkin CH CBE FRSL (9 August 1922 – 2 December 1985) was an English poet, novelist and librarian. His first book of poetry, The North Ship, was published in 1945, followed by two novels, Jill (1946) and A Girl in Winter (1947), and he came to prominence in 1955 with the publication of his second collection of poems, The Less Deceived, followed by The Whitsun Weddings (1964) and High Windows (1974). He contributed to The Daily Telegraph as its jazz critic from 1961 to 1971, articles gathered in All What Jazz: A Record Diary 1961–71 (1985), and he edited The Oxford Book of Twentieth Century English Verse (1973). His many honours include the Queen's Gold Medal for Poetry. He was offered, but declined, the position of Poet Laureate in 1984, following the death of Sir John Betjeman.
 
 After graduating from Oxford in 1943 with a first in English language and literature, Larkin became a librarian. It was during the thirty years he worked with distinction as university librarian at the Brynmor Jones Library at the University of Hull that he produced the greater part of his published work. His poems are marked by what Andrew Motion calls 'a very English, glum accuracy about emotions, places, and relationships', and what Donald Davie described as 'lowered sights and diminished expectations'. Eric Homberger (echoing Randall Jarrell) called him 'the saddest heart in the post-war supermarket'—Larkin himself said that deprivation for him was what daffodils were for Wordsworth. Influenced by W. H. Auden, W. B. Yeats, and Thomas Hardy, his poems are highly structured but flexible verse forms. They were described by Jean Hartley, the ex-wife of Larkin's publisher George Hartley (the Marvell Press), as a 'piquant mixture of lyricism and discontent', though anthologist Keith Tuma writes that there is more to Larkin's work than its reputation for dour pessimism suggests."
@@ -27,19 +27,19 @@ After graduating from Oxford in 1943 with a first in English language and litera
 
 Poet.create(
   name: "Louis MacNeice",
-  date_of_birth: 1907,
+  year_of_birth: 1907,
   biography: "Frederick Louis MacNeice CBE (12 September 1907 – 3 September 1963) was an Irish poet and playwright. He was part of the generation of the Auden Group that included W. H. Auden, Stephen Spender and Cecil Day-Lewis. MacNeice's body of work was widely appreciated by the public during his lifetime, due in part to his relaxed, but socially and emotionally aware style. Never as overtly (or simplistically) political as some of his contemporaries, his work shows a humane opposition to totalitarianism as well as an acute awareness of his Irish roots."
   )
 
 Poet.create(
   name: "Pablo Neruda",
-  date_of_birth: 1904,
+  year_of_birth: 1904,
   biography: "Ricardo Eliécer Neftalí Reyes Basoalto (12 July 1904 – 23 September 1973), better known by his pen name and, later, legal name Pablo Neruda (/nəˈruːdə/;[1] Spanish: [ˈpaβlo neˈɾuða]), was a Chilean poet-diplomat and politician. Neruda became known as a poet when he was 13 years old, and wrote in a variety of styles, including surrealist poems, historical epics, overtly political manifestos, a prose a,utobiography, and passionate love poems such as the ones in his collection Twenty Love Poems and a Song of Despair (1924). He won the Nobel Prize for Literature in 1971."
   )
 
 Poet.create(
   name: "C.P. Cavafy",
-  date_of_birth: 1863,
+  year_of_birth: 1863,
   biography: "Constantine Peter Cavafy (/kəˈvɑːfɪ/; also known as Konstantin or Konstantinos Petrou Kavafis; Greek: Κωνσταντίνος Π. Καβάφης; April 29 (April 17, OS), 1863 – April 29, 1933) was an Egyptian Greek poet, journalist and civil servant. His consciously individual style earned him a place among the most important figures not only in Greek poetry, but in Western poetry as well.
 
 Cavafy wrote 154 poems, while dozens more remained incomplete or in sketch form. During his lifetime, he consistently refused to formally publish his work and preferred to share it through local newspapers and magazines, or even print it out himself and give it away to anyone interested. His most important poems were written after his fortieth birthday, and officially published two years after his death."
@@ -47,7 +47,7 @@ Cavafy wrote 154 poems, while dozens more remained incomplete or in sketch form.
 
 Poet.create(
   name: "Sylvia Plath",
-  date_of_birth: 1932,
+  year_of_birth: 1932,
   biography: "Sylvia Plath (/plæθ/; October 27, 1932 – February 11, 1963) was an American poet, novelist, and short-story writer. Born in Boston, she studied at Smith College and Newnham College at the University of Cambridge before receiving acclaim as a poet and writer. She married fellow poet Ted Hughes in 1956, and they lived together in the United States and then in England. They had two children, Frieda and Nicholas, before separating in 1962.
 
 Plath was clinically depressed for most of her adult life, and was treated multiple times with electroconvulsive therapy (ECT). She committed suicide in 1963.
@@ -58,7 +58,7 @@ Plath is credited with advancing the genre of confessional poetry and is best kn
 
 Poet.create(
   name: "Stevie Smith",
-  date_of_birth: 1902,
+  year_of_birth: 1902,
   biography: "Smith's first volume of poetry, the self-illustrated A Good Time Was Had By All, was published in 1937 and established her as a poet. Soon her poems were found in periodicals. Her style was often very dark; her characters were perpetually saying 'goodbye' to their friends or welcoming death. At the same time her work has an eerie levity and can be very funny though it is neither light nor whimsical. 'Stevie Smith often uses the word 'peculiar' and it is the best word to describe her effects' (Hermione Lee). She was never sentimental, undercutting any pathetic effects with the ruthless honesty of her humour.
 
 'A good time was had by all' itself became a catch phrase, still occasionally used to this day. Smith said she got the phrase from parish magazines, where descriptions of church picnics often included this phrase. This saying has become so familiar that it is recognised even by those who are unaware of its origin. Variations appear in pop culture, including 'Being for the Benefit of Mr. Kite!' by the Beatles.
@@ -68,7 +68,7 @@ Though her poems were remarkably consistent in tone and quality throughout her l
 
 Poet.create(
   name: "Langston Hughes",
-  date_of_birth: 1902,
+  year_of_birth: 1902,
   biography: "James Mercer Langston Hughes (February 1, 1902 – May 22, 1967) was an American poet, social activist, novelist, playwright, and columnist from Joplin, Missouri.
 
 He was one of the earliest innovators of the then-new literary art form called jazz poetry. Hughes is best known as a leader of the Harlem Renaissance in New York City. He famously wrote about the period that 'the negro was in vogue', which was later paraphrased as 'when Harlem was in vogue'."
@@ -76,13 +76,13 @@ He was one of the earliest innovators of the then-new literary art form called j
 
 Poet.create(
   name: "Derek Walcott",
-  date_of_birth: 1930,
+  year_of_birth: 1930,
   biography: "Sir Derek Alton Walcott, KCSL, OBE, OCC (23 January 1930 – 17 March 2017) was a Saint Lucian poet and playwright. He received the 1992 Nobel Prize in Literature. He was the University of Alberta's first distinguished scholar in residence, where he taught undergraduate and graduate writing courses. He also served as Professor of Poetry at the University of Essex from 2010 to 2013. His works include the Homeric epic poem Omeros (1990), which many critics view 'as Walcott's major achievement.' In addition to winning the Nobel Prize, Walcott received many literary awards over the course of his career, including an Obie Award in 1971 for his play Dream on Monkey Mountain, a MacArthur Foundation 'genius' award, a Royal Society of Literature Award, the Queen's Medal for Poetry, the inaugural OCM Bocas Prize for Caribbean Literature, the 2011 T. S. Eliot Prize for his book of poetry White Egrets and the Griffin Trust For Excellence In Poetry Lifetime Recognition Award in 2015."
   )
 
 Poet.create(
   name: "W.B. Yeats",
-  date_of_birth: 1865,
+  year_of_birth: 1865,
   biography: "William Butler Yeats[a] (13 June 1865 – 28 January 1939) was an Irish poet and one of the foremost figures of 20th-century literature. A pillar of both the Irish and British literary establishments, he helped to found the Abbey Theatre, and in his later years served as an Irish Senator for two terms. Yeats was a driving force behind the Irish Literary Revival along with Lady Gregory, Edward Martyn and others.
 
 He was born in Sandymount, Ireland and educated there and in London. He spent childhood holidays in County Sligo and studied poetry from an early age when he became fascinated by Irish legends and the occult. These topics feature in the first phase of his work, which lasted roughly until the turn of the 20th century. His earliest volume of verse was published in 1889, and its slow-paced and lyrical poems display Yeats's debts to Edmund Spenser, Percy Bysshe Shelley, and the poets of the Pre-Raphaelite Brotherhood. From 1900, his poetry grew more physical and realistic. He largely renounced the transcendental beliefs of his youth, though he remained preoccupied with physical and spiritual masks, as well as with cyclical theories of life. In 1923, he was awarded the Nobel Prize in Literature."
@@ -90,7 +90,7 @@ He was born in Sandymount, Ireland and educated there and in London. He spent ch
 
 Poet.create(
   name: "Czeslaw Milosz",
-  date_of_birth: 1911,
+  year_of_birth: 1911,
   biography: "Czesław Miłosz ([ˈt͡ʂɛswaf ˈmiwɔʂ] (About this sound listen); 30 June 1911 – 14 August 2004) was a Polish poet, prose writer, translator and diplomat. His World War II-era sequence The World is a collection of twenty 'naïve' poems. Following the war, he served as Polish cultural attaché in Paris and Washington, D.C., then in 1951 defected to the West. His nonfiction book The Captive Mind (1953) became a classic of anti-Stalinism. From 1961 to 1998 he was a professor of Slavic Languages and Literatures at the University of California, Berkeley.
 
 He became a U.S. citizen in 1970. In 1978 he was awarded the Neustadt International Prize for Literature, and in 1980 the Nobel Prize in Literature. In 1999 he was named a Puterbaugh Fellow. After the fall of the Iron Curtain, he divided his time between Berkeley, California, and Kraków, Poland."
@@ -98,7 +98,7 @@ He became a U.S. citizen in 1970. In 1978 he was awarded the Neustadt Internatio
 
 Poet.create(
   name: "Robert Bly",
-  date_of_birth: 1926,
+  year_of_birth: 1926,
   biography: "Robert Bly (born December 23, 1926) is an American poet, essayist, activist, and leader of the mythopoetic men's movement. His most commercially successful book to date was Iron John: A Book About Men (1990), a key text of the mythopoetic men's movement, which spent 62 weeks on The New York Times Best Seller list. He won the 1968 National Book Award for Poetry for his book The Light Around the Body."
   )
 
