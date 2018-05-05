@@ -1,2 +1,6 @@
 <h1><%= @poem.title %></h1>
-<p><%= @poem.body %></p>
+<% @poem_body.each do |line| %>
+  <p><%= line %></p>
+<% end %>
+<p><strong>- <%= @poem.poet.name %></strong></p>
+
