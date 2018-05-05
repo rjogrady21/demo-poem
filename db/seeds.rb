@@ -110,104 +110,127 @@ Poem.create(
   title: "High Windows",
   poet_id: 1,
   body:
-  lines: ["When I see a couple of kids", "And guess he’s fucking her and she’s", "Taking pills or wearing a diaphragm,", "I know this is paradise", "
-Everyone old has dreamed of all their lives—", "Bonds and gestures pushed to one side", "Like an outdated combine harvester,", "And everyone young going down the long slide", "
-To happiness, endlessly. I wonder if", "Anyone looked at me, forty years back,", "And thought, That’ll be the life;", "No God any more, or sweating in the dark", "
-About hell and that, or having to hide", "What you think of the priest. He", "And his lot will all go down the long slide", "Like free bloody birds. And immediately", "
-Rather than words comes the thought of high windows:", "The sun-comprehending glass,", "And beyond it, the deep blue air, that shows", "Nothing, and is nowhere, and is endless."]
-  )
+"When I see a couple of kids
+And guess he’s fucking her and she’s
+Taking pills or wearing a diaphragm,
+I know this is paradise
+
+Everyone old has dreamed of all their lives—
+Bonds and gestures pushed to one side
+Like an outdated combine harvester,
+And everyone young going down the long slide
+
+To happiness, endlessly. I wonder if
+Anyone looked at me, forty years back,
+And thought, That’ll be the life;
+No God any more, or sweating in the dark
+
+About hell and that, or having to hide
+What you think of the priest. He
+And his lot will all go down the long slide
+Like free bloody birds. And immediately
+
+Rather than words comes the thought of high windows:
+The sun-comprehending glass,
+And beyond it, the deep blue air, that shows
+Nothing, and is nowhere, and is endless."
+)
 
 Poem.create(
   title: "Snow",
   poet_id: 2,
-  body: "The room was suddenly rich and the great bay-window was
-/nSpawning snow and pink roses against it
-/nSoundlessly collateral and incompatible:
-/nWorld is suddener than we fancy it.
-/n
-/nWorld is crazier and more of it than we think,
-/nIncorrigibly plural. I peel and portion
-/nA tangerine and spit the pips and feel
-/nThe drunkenness of things being various.
-/n
-/nAnd the fire flames with a bubbling sound for world
-/nIs more spiteful and gay than one supposes—
-/nOn the tongue on the eyes on the ears in the palms of one's hands—
-/nThere is more than glass between the snow and the huge roses."
+  body:
+"The room was suddenly rich and the great bay-window was
+Spawning snow and pink roses against it
+Soundlessly collateral and incompatible:
+World is suddener than we fancy it.
+
+World is crazier and more of it than we think,
+Incorrigibly plural. I peel and portion
+A tangerine and spit the pips and feel
+The drunkenness of things being various.
+
+And the fire flames with a bubbling sound for world
+Is more spiteful and gay than one supposes—
+On the tongue on the eyes on the ears in the palms of one's hands—
+There is more than glass between the snow and the huge roses."
   )
 
 Poem.create(
   title: "LXXXIX",
   poet_id: 3,
-  body: "When I die, I want your hands on my eyes:
-/nI want the light and the wheat of your beloved hands
-/nto pass their freshness over me once more:
-/nI want to feel the softness that changed my destiny.
+  body:
+"When I die, I want your hands on my eyes:
+I want the light and the wheat of your beloved hands
+to pass their freshness over me once more:
+I want to feel the softness that changed my destiny.
 
-/nI want you to live while I wait for you, asleep.
-/nI want your ears still to hear the wind, I want you
-/nto sniff the sea's aroma that we loved together,
-/nto continue to walk on the sand we walk on.
-/n
-/nI want what I love to continue to live,
-/nand you whom I love and sang above everything else
-/nto continue to flourish, full-flowered:
-/n
-/nso that you can reach everything my love directs you to,
-/nso that my shadow can travel along in your hair,
-/nso that everything can learn the reason for my song."
+I want you to live while I wait for you, asleep.
+I want your ears still to hear the wind, I want you
+to sniff the sea's aroma that we loved together,
+to continue to walk on the sand we walk on.
+
+I want what I love to continue to live,
+and you whom I love and sang above everything else
+to continue to flourish, full-flowered:
+
+so that you can reach everything my love directs you to,
+so that my shadow can travel along in your hair,
+so that everything can learn the reason for my song."
   )
 
 Poem.create(
   title: "Ithaka",
   poet_id: 4,
-  body: "As you set out for Ithaka
-/nhope the voyage is a long one,
-/nfull of adventure, full of discovery.
-/nLaistrygonians and Cyclops,
-/nangry Poseidon—don’t be afraid of them:
-/nyou’ll never find things like that on your way
-/nas long as you keep your thoughts raised high,
-/nas long as a rare excitement
-/nstirs your spirit and your body.
-/nLaistrygonians and Cyclops,
-/nwild Poseidon—you won’t encounter them
-/nunless you bring them along inside your soul,
-/nunless your soul sets them up in front of you.
-/n
-/nHope the voyage is a long one.
-/nMay there be many a summer morning when,
-/nwith what pleasure, what joy,
-/nyou come into harbors seen for the first time;
-/nmay you stop at Phoenician trading stations
-/nto buy fine things,
-/nmother of pearl and coral, amber and ebony,
-/nsensual perfume of every kind—
-/nas many sensual perfumes as you can;
-/nand may you visit many Egyptian cities
-/nto gather stores of knowledge from their scholars.
-/n
-/nKeep Ithaka always in your mind.
-/nArriving there is what you are destined for.
-/nBut do not hurry the journey at all.
-/nBetter if it lasts for years,
-/nso you are old by the time you reach the island,
-/nwealthy with all you have gained on the way,
-/nnot expecting Ithaka to make you rich.
-/n
-/nIthaka gave you the marvelous journey.
-/nWithout her you would not have set out.
-/nShe has nothing left to give you now.
-/n
-/nAnd if you find her poor, Ithaka won’t have fooled you.
-/nWise as you will have become, so full of experience,
-/nyou will have understood by then what these Ithakas mean. "
+  body:
+"As you set out for Ithaka
+hope the voyage is a long one,
+full of adventure, full of discovery.
+Laistrygonians and Cyclops,
+angry Poseidon—don’t be afraid of them:
+you’ll never find things like that on your way
+as long as you keep your thoughts raised high,
+as long as a rare excitement
+stirs your spirit and your body.
+Laistrygonians and Cyclops,
+wild Poseidon—you won’t encounter them
+unless you bring them along inside your soul,
+unless your soul sets them up in front of you.
+
+Hope the voyage is a long one.
+May there be many a summer morning when,
+with what pleasure, what joy,
+you come into harbors seen for the first time;
+may you stop at Phoenician trading stations
+to buy fine things,
+mother of pearl and coral, amber and ebony,
+sensual perfume of every kind—
+as many sensual perfumes as you can;
+and may you visit many Egyptian cities
+to gather stores of knowledge from their scholars.
+
+Keep Ithaka always in your mind.
+Arriving there is what you are destined for.
+But do not hurry the journey at all.
+Better if it lasts for years,
+so you are old by the time you reach the island,
+wealthy with all you have gained on the way,
+not expecting Ithaka to make you rich.
+
+Ithaka gave you the marvelous journey.
+Without her you would not have set out.
+She has nothing left to give you now.
+
+And if you find her poor, Ithaka won’t have fooled you.
+Wise as you will have become, so full of experience,
+you will have understood by then what these Ithakas mean."
   )
 
 Poem.create(
   title: "Tulips",
   poet_id: 5,
-  body: "The tulips are too excitable, it is winter here.
+  body:
+"The tulips are too excitable, it is winter here.
 Look how white everything is, how quiet, how snowed-in.
 I am learning peacefulness, lying by myself quietly
 As the light lies on these white walls, this bed, these hands.
@@ -283,7 +306,8 @@ And comes from a country far away as health."
 Poem.create(
   title: "Not Waving, But Drowning",
   poet_id: 6,
-  body: "Nobody heard him, the dead man,
+  body:
+"Nobody heard him, the dead man,
 But still he lay moaning:
 I was much further out than you thought
 And not waving but drowning.
@@ -302,7 +326,8 @@ And not waving but drowning."
 Poem.create(
   title: "The Negro Speaks of Rivers",
   poet_id: 7,
-  body: "I’ve known rivers:
+  body:
+"I’ve known rivers:
 I’ve known rivers ancient as the world and older than the
      flow of human blood in human veins.
 
@@ -324,7 +349,8 @@ My soul has grown deep like the rivers."
 Poem.create(
   title: "Love After Love",
   poet_id: 8,
-  body: "The time will come
+  body:
+"The time will come
 when, with elation
 you will greet yourself arriving
 at your own door, in your own mirror
@@ -347,7 +373,8 @@ Sit. Feast on your life. "
 Poem.create(
   title: "Sailing To Byzantium",
   poet_id: 9,
-  body: "That is no country for old men. The young
+  body:
+"That is no country for old men. The young
 In one another's arms, birds in the trees
 – Those dying generations – at their song,
 The salmon‐falls, the mackerel‐crowded seas,
@@ -387,8 +414,8 @@ Of what is past, or passing, or to come."
 Poem.create(
   title: "Love",
   poet_id: 10,
-  body: "
-  Love means to learn to look at yourself
+  body:
+"Love means to learn to look at yourself
 The way one looks at distant things
 For you are only one thing among many.
 And whoever sees that way heals his heart,
@@ -398,13 +425,14 @@ A bird and a tree say to him: Friend.
 Then he wants to use himself and things
 So that they stand in the glow of ripeness.
 It doesn’t matter whether he knows what he serves:
-Who serves best doesn’t always understand. "
+Who serves best doesn’t always understand."
   )
 
 Poem.create(
   title: "The Third Body",
   poet_id: 11,
-  body: "A man and a woman sit near each other, and they do
+  body:
+"A man and a woman sit near each other, and they do
   not long
 At this moment to be older, or younger, or born
 In any other nation, or any other time, or any other
