@@ -1,2 +1,4 @@
-<h1>Poems#show</h1>
-<p>Find me in app/views/poems/show.html.erb</p>
+<h1><%= @poem.title %></h1>
+<p><%= simple_format(@poem.body) %></p>
+<p><%= @poem.poet.name %></p>
+<%= link_to "More from this poet", poet_path(@poem.poet) %>
