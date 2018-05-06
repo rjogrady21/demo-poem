@@ -1,2 +1,11 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container">
+  <h1>Here is your random poem...</h1>
+  <div class="poem_header">
+    <h1><%= @random_poem.title %></h1>
+  </div>
+  <div class="poem_body">
+    <p><%= simple_format(@random_poem.body) %></p>
+    <p class="poem_name"><%= @random_poem.poet.name %></p>
+  </div>
+  <%= link_to "More from this poet", poet_path(@random_poem.poet) %>
+</div>
