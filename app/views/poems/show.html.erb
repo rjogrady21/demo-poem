@@ -1,4 +1,10 @@
-<h1><%= @poem.title %></h1>
-<p><%= simple_format(@poem.body) %></p>
-<p><%= @poem.poet.name %></p>
-<%= link_to "More from this poet", poet_path(@poem.poet) %>
+<div class="container">
+  <div class="poem_header">
+    <h1><%= @poem.title %></h1>
+  </div>
+  <div class="poem_body">
+    <p><%= simple_format(@poem.body) %></p>
+    <p class="poem_name"><%= @poem.poet.name %></p>
+  </div>
+  <%= link_to "More from this poet", poet_path(@poem.poet) %>
+</div>

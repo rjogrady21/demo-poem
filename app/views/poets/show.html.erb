@@ -1,2 +1,8 @@
-<h1>Poets#show</h1>
-<p>Find me in app/views/poets/show.html.erb</p>
+<div class="container">
+  <div class="poet_header">
+    <h1><%= @poet.name %></h1><%= @poet.year_of_birth %>
+  </div>
+  <div class="poet_body">
+    <p><%= @poet.biography %></p>
+  </div>
+</div>
