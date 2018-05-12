@@ -683,7 +683,7 @@ Categorisation.create(
   category_id: 13
   )
 
-ategorisation.create(
+Categorisation.create(
   poem_id: 11,
   category_id: 8
   )
