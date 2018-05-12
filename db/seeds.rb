@@ -102,7 +102,7 @@ puts 'Creating poets'
 
 puts "creating categories"
 
-categories = ["Time & Change", "Identity", "New Beginnings", "Family & Home", "Youth & Coming of Age", "Lust & Sexuality", "Nature & Seasons", "Fear", "Friendship", "Forgiveness & Atonement", "Death & Loss", "Travel & Adventure", "Spirituality", "Peace & Calm", "Conflict & Struggle", "Amusement", "Loneliness & Depression", "Inspiration & Hope", "Arts & Culture", "Politics & History", "Social Commentary", "Love & Admiration"]
+categories = ["Time & Change", "Happiness & Joy" "Identity", "New Beginnings", "Family & Home", "Youth & Coming of Age", "Lust & Sexuality", "Nature & Seasons", "Fear", "Friendship", "Forgiveness & Atonement", "Death & Loss", "Travel & Adventure", "Spirituality", "Peace & Calm", "Conflict & Struggle", "Amusement & Satire", "Loneliness & Depression", "Inspiration & Hope", "Arts & Culture", "Politics & History", "Social Commentary", "Love & Admiration"]
 categories.sort.each do |category|
   puts category
   Category.create(name: category)
@@ -230,7 +230,22 @@ Rather than words comes the thought of high windows:
 The sun-comprehending glass,
 And beyond it, the deep blue air, that shows
 Nothing, and is nowhere, and is endless."
-)
+ )
+
+Categorisation.create(
+  poem_id: 1,
+  category_id: 20
+  )
+
+Categorisation.create(
+  poem_id: 1,
+  category_id: 9
+  )
+
+Categorisation.create(
+  poem_id: 1,
+  category_id: 19
+  )
 
 Poem.create(
   title: "Snow",
@@ -250,6 +265,11 @@ And the fire flames with a bubbling sound for world
 Is more spiteful and gay than one supposes—
 On the tongue on the eyes on the ears in the palms of one's hands—
 There is more than glass between the snow and the huge roses."
+  )
+
+Categorisation.create(
+  poem_id: 2,
+  category_id: 21
   )
 
 Poem.create(
@@ -273,6 +293,16 @@ to continue to flourish, full-flowered:
 so that you can reach everything my love directs you to,
 so that my shadow can travel along in your hair,
 so that everything can learn the reason for my song."
+  )
+
+Categorisation.create(
+  poem_id: 3,
+  category_id: 13
+  )
+
+Categorisation.create(
+  poem_id: 3,
+  category_id: 4
   )
 
 Poem.create(
@@ -320,6 +350,21 @@ She has nothing left to give you now.
 And if you find her poor, Ithaka won’t have fooled you.
 Wise as you will have become, so full of experience,
 you will have understood by then what these Ithakas mean."
+  )
+
+Categorisation.create(
+  poem_id: 4,
+  category_id: 22
+  )
+
+Categorisation.create(
+  poem_id: 4,
+  category_id: 21
+  )
+
+Categorisation.create(
+  poem_id: 4,
+  category_id: 10
   )
 
 Poem.create(
@@ -399,6 +444,16 @@ The water I taste is warm and salt, like the sea,
 And comes from a country far away as health."
   )
 
+Categorisation.create(
+  poem_id: 5,
+  category_id: 10
+  )
+
+Categorisation.create(
+  poem_id: 5,
+  category_id: 12
+  )
+
 Poem.create(
   title: "Not Waving, But Drowning",
   poet_id: 6,
@@ -417,6 +472,16 @@ Oh, no no no, it was too cold always
 (Still the dead one lay moaning)
 I was much too far out all my life
 And not waving but drowning."
+  )
+
+Categorisation.create(
+  poem_id: 6,
+  category_id: 12
+  )
+
+Categorisation.create(
+  poem_id: 6,
+  category_id: 1
   )
 
 Poem.create(
@@ -442,6 +507,21 @@ Ancient, dusky rivers.
 My soul has grown deep like the rivers."
   )
 
+Categorisation.create(
+  poem_id: 7,
+  category_id: 19
+  )
+
+Categorisation.create(
+  poem_id: 7,
+  category_id: 10
+  )
+
+Categorisation.create(
+  poem_id: 7,
+  category_id: 22
+  )
+
 Poem.create(
   title: "Love After Love",
   poet_id: 8,
@@ -464,6 +544,31 @@ Take down the love letters from the bookshelf,
 the photographs, the desperate notes,
 peel your own image from the mirror.
 Sit. Feast on your life. "
+  )
+
+Categorisation.create(
+  poem_id: 8,
+  category_id: 13
+  )
+
+Categorisation.create(
+  poem_id: 8,
+  category_id: 7
+  )
+
+Categorisation.create(
+  poem_id: 8,
+  category_id: 16
+  )
+
+Categorisation.create(
+  poem_id: 8,
+  category_id: 21
+  )
+
+Categorisation.create(
+  poem_id: 8,
+  category_id: 10
   )
 
 Poem.create(
@@ -507,6 +612,16 @@ To lords and ladies of Byzantium
 Of what is past, or passing, or to come."
   )
 
+Categorisation.create(
+  poem_id: 9,
+  category_id: 21
+  )
+
+Categorisation.create(
+  poem_id: 9,
+  category_id: 22
+  )
+
 Poem.create(
   title: "Love",
   poet_id: 10,
@@ -522,6 +637,21 @@ Then he wants to use himself and things
 So that they stand in the glow of ripeness.
 It doesn’t matter whether he knows what he serves:
 Who serves best doesn’t always understand."
+  )
+
+Categorisation.create(
+  poem_id: 10,
+  category_id: 13
+  )
+
+Categorisation.create(
+  poem_id: 10,
+  category_id: 10
+  )
+
+Categorisation.create(
+  poem_id: 10,
+  category_id: 9
   )
 
 Poem.create(
@@ -548,4 +678,15 @@ As they breathe they feed someone we do not know,
 Someone we know of, whom we have never seen."
   )
 
+Categorisation.create(
+  poem_id: 11,
+  category_id: 13
+  )
+
+ategorisation.create(
+  poem_id: 11,
+  category_id: 8
+  )
+
 puts "poems created"
+
