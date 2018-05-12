@@ -1,4 +1,5 @@
 class Poem < ApplicationRecord
   belongs_to :poet
-  has_and_belongs_to_many :categories
+  has_many :categorisations
+  has_many :categories, through: :categorisations
 end

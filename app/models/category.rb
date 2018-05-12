@@ -1,3 +1,4 @@
 class Category < ApplicationRecord
-  has_and_belongs_to_many :poems
+  has_many :categorisations
+  has_many :poems, through: :categorisations
 end
