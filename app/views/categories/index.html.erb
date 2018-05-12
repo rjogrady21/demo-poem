@@ -1,2 +1,9 @@
-<h1>Categories#index</h1>
-<p>Find me in app/views/categories/index.html.erb</p>
+<h1>Browse categories</h1>
+<% @categories.each do |category| %>
+<div class="category_section">
+  <h3><%= category.name %></h3>
+  <ul>
+    <li><%= category.poem.title %></li>
+    <li><%= category.poem.body %></li>
+  </ul>
+</div>
