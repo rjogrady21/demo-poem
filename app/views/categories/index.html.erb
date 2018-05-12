@@ -1,9 +1,0 @@
-<h1>Browse categories</h1>
-<% @categories.each do |category| %>
-<div class="category_section">
-  <h3><%= category.name %></h3>
-  <ul>
-    <li><%= category.poem.title %></li>
-    <li><%= category.poem.body.lines.first %></li>
-  </ul>
-</div>
