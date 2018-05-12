@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'categories/index'
+  get 'categories/show'
   resources :poems, only: [:show, :index]
   resources :poets, only: [:show, :index] do
     resources :poems, only: [:show, :index]
