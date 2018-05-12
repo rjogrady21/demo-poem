@@ -1,12 +1,14 @@
-<h1>Browse categories</h1>
-<% @categories.each do |category| %>
-<div class="categorisation_section">
-  <h3><%= category.name %></h3>
-  <% category.categorisations.each do |categorisation| %>
-  <ul>
-    <li><%= categorisation.poem.title %></li>
-    <li><%= categorisation.poem.body.lines.first %></li>
-  </ul>
-  <% end %>
-</div>
+<div class="container">
+  <h1>Browse categories</h1>
+  <% @categories.each do |category| %>
+  <div class="categorisation_section">
+    <h3><%= category.name %></h3>
+    <% category.poems.each do |poem| %>
+    <ul>
+      <li><%= poem.title %></li>
+      <li><%= poem.body.lines.first %></li>
+      <%= link_to "Read Poem", poem_path(poem) %>
+    </ul>
+    <% end %>
+  </div>
 <% end %>

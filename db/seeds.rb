@@ -11,95 +11,6 @@ puts 'Creating categories'
 
 puts 'Creating poets'
 
-# def scrape_poetry_foundation
-# #   # title_array = []
-# #   # body_array = []
-# #   poet_array = []
-#   file = 'poems.json'
-#   poem_serialized = open(file).read
-#   poems = JSON.parse(poem_serialized)
-
-  # keyword_array = []
-  # poems.first(100).each do |poem_hash|
-  #   keyword_array << poem_hash["keywords"]
-  # end
-
-
-  # potential_categories = ["Eating", "Drinking", "Religion", "The Spiritual", "Activities", "Eating", "Drinking", "Social Commentaries", "Class", "Activities", "Indoor Activities", "Relationships", "Home Life", "Arts", "Sciences", "Architecture", "Design", "Activities", "Jobs", "Working", "Activities", "Jobs", "Working", "School", "Learning", "Relationships", "Family", "Ancestors", "Arts", "Sciences", "Poetry", "Poets", "Activities", "Jobs", "Working", "Social Commentaries", "Crime", "Punishment", "Activities", "School", "Learning", "Social Commentaries", "Crime", "Punishment", "Activities", "Sports", "Outdoor Activities", "Activities", "Travels", "Journeys", "Arts", "Sciences", "Humor", "Satire", "Social Commentaries", "Class", "Crime", "Punishment", "History", "Politics", "Money", "Economics", "Popular Culture", "Race", "Ethnicity", "Arts", "Sciences", "Language", "Linguistics", "Arts", "Sciences", "Language", "Linguistics", "Poetry", "Poets", "Living", "Birth", "Birthdays", "The Body", "Living", "Coming of Age", "Activities", "Gardening", "Living", "Coming of Age", "Life Choices", "Relationships", "Family", "Ancestors", "Living", "Death", "Living", "Death", "Relationships", "Family", "Ancestors", "Religion", "Judaism", "Arts", "Sciences", "Language", "Linguistics", "Social Commentaries", "History", "Politics", "Living", "Death", "The Mind", "Relationships", "Family", "Ancestors", "Religion", "Judaism", "Social Commentaries", "History", "Politics", "Living", "Growing Old", "Living", "Health", "Illness", "Living", "Life Choices", "Living", "Life Choices", "Relationships", "Family", "Ancestors", "Living", "Life Choices", "Relationships", "Friends", "Enemies", "Arts", "Sciences", "Music", "Living", "Life Choices", "The Body", "Living", "Marriage", "Companionship", "Romantic Love", "Social Commentaries", "War", "Conflict", "Living", "Sorrow", "Grieving", "Living", "Sorrow", "Grieving", "The Mind", "Love", "Heartache", "Loss", "Living", "The Body", "Love", "Desire", "Arts", "Sciences", "Poetry", "Poets", "Living", "The Body", "The Mind", "Living", "The Mind", "Relationships", "Family", "Ancestors", "Social Commentaries", "History", "Politics", "Living", "Youth", "Social Commentaries", "Race", "Ethnicity", "War", "Conflict", "Love", "Desire", "Arts", "Sciences", "Poetry", "Poets", "Love", "Desire", "Romantic Love", "Love", "Unrequited Love", "Nature", "Animals", "Relationships", "Family", "Ancestors", "Relationships", "Family", "Ancestors", "Arts", "Sciences", "Humor", "Satire", "Language", "Linguistics", "Music", "Relationships", "Family", "Ancestors", "Arts", "Sciences", "Music", "Theater", "Dance", "Social Commentaries", "Popular Culture", "Race", "Ethnicity", "Relationships", "Family", "Ancestors", "Friends", "Enemies", "Relationships", "Men", "Women", "Social Commentaries", "Gender", "Sexuality", "Religion", "The Spiritual", "Social Commentaries", "Cities", "Urban Life", "Social Commentaries", "Cities", "Urban Life", "Race", "Ethnicity", "Social Commentaries", "History", "Politics", "Social Commentaries", "History", "Politics", "Race", "Ethnicity", "Social Commentaries", "History", "Politics", "War", "Conflict", "Social Commentaries", "War", "Conflict"]
-  # puts potential_categories.uniq.sort
-
-#   poet_name_array.each do |poet|
-#     # Poet.create(
-#     #   name: poet
-#     # )
-#   end
-
-  # Create the poem
-  # poems_body_array = []
-  # poems.each do |poem_hash|
-  #   poem_body = poem_hash["body"]
-
-  # end
-
-  # poet_id_array = []
-  # poems.each do |poem_hash|
-  #   poet_id = Poet.find_by_name(poem_hash["poet"])
-
-  #   # Poem.create(
-  #   #   poet_id: poet_id,
-  #   #   poem)
-  # end
-  # puts poet_id_array
-
-  # puts poems_body_array[0]
-  # puts poems_body_array[1]
-
-  # getting list of all poets (unique)
-  # Insert all of them in the database
-  # read all the poems, read the poems
-  # for every poem, you find_by_name author => poet_id
-  # insert poem
-
-
-
-
-  # poems_poets = []
-  # new_poems_array.each do |poem|
-  #   poems_poets << poem["poet"]
-  # end
-
-  # poet_hash_array
-
-  # poet_hash = Hash.new
-  # poet_hash_array = []
-  # poet_name_array.each_with_index do |x, index|
-  #   new_poet = {x => index + 1}
-  #   poet_hash_array << new_poet
-  # end
-  # This creates an array of poet hashes, where each poet corresponds to a number
-
-
-  # poems.each do |poem|
-  #   poem["poet"].gsub { |}
-
-  # new_poems_array = poems.sort_by { |poem_hash| poem_hash["poet"] }
-  # This sorts the JSON by the alpahetical order of poets
-
-  # Create an array of all the poets in alphabetical order
-  # Use the index (+1) of those poets to give the poet_id of each poet
-  # Use a .match method to say where two poet names are the same
-  # When there is a match then gsub the idea
-  #     title: poem_hash["title"]
-
-  #     )
-  #     title_array << poem_hash["title"]
-  #     body_array << poem_hash["text"]
-  # end
-  # return title_array
-# end
-
-# puts scrape_poetry_foundation
-
 puts "creating categories"
 
 categories = ["Time & Change", "Happiness & Joy" "Identity", "New Beginnings", "Family & Home", "Youth & Coming of Age", "Lust & Sexuality", "Nature & Seasons", "Fear", "Friendship", "Forgiveness & Atonement", "Death & Loss", "Travel & Adventure", "Spirituality", "Peace & Calm", "Conflict & Struggle", "Amusement & Satire", "Loneliness & Depression", "Inspiration & Hope", "Arts & Culture", "Politics & History", "Social Commentary", "Love & Admiration"]
@@ -108,11 +19,7 @@ categories.sort.each do |category|
   Category.create(name: category)
 end
 
-puts "categories created"
-
-
-puts "creating poets"
-
+puts "creating Philip Larkin"
 Poet.create(
   name: "Philip Larkin",
   year_of_birth: 1922,
@@ -120,87 +27,6 @@ Poet.create(
 
 After graduating from Oxford in 1943 with a first in English language and literature, Larkin became a librarian. It was during the thirty years he worked with distinction as university librarian at the Brynmor Jones Library at the University of Hull that he produced the greater part of his published work. His poems are marked by what Andrew Motion calls 'a very English, glum accuracy about emotions, places, and relationships', and what Donald Davie described as 'lowered sights and diminished expectations'. Eric Homberger (echoing Randall Jarrell) called him 'the saddest heart in the post-war supermarket'—Larkin himself said that deprivation for him was what daffodils were for Wordsworth. Influenced by W. H. Auden, W. B. Yeats, and Thomas Hardy, his poems are highly structured but flexible verse forms. They were described by Jean Hartley, the ex-wife of Larkin's publisher George Hartley (the Marvell Press), as a 'piquant mixture of lyricism and discontent', though anthologist Keith Tuma writes that there is more to Larkin's work than its reputation for dour pessimism suggests."
   )
-
-Poet.create(
-  name: "Louis MacNeice",
-  year_of_birth: 1907,
-  biography: "Frederick Louis MacNeice CBE (12 September 1907 – 3 September 1963) was an Irish poet and playwright. He was part of the generation of the Auden Group that included W. H. Auden, Stephen Spender and Cecil Day-Lewis. MacNeice's body of work was widely appreciated by the public during his lifetime, due in part to his relaxed, but socially and emotionally aware style. Never as overtly (or simplistically) political as some of his contemporaries, his work shows a humane opposition to totalitarianism as well as an acute awareness of his Irish roots."
-  )
-
-Poet.create(
-  name: "Pablo Neruda",
-  year_of_birth: 1904,
-  biography: "Ricardo Eliécer Neftalí Reyes Basoalto (12 July 1904 – 23 September 1973), better known by his pen name and, later, legal name Pablo Neruda (/nəˈruːdə/;[1] Spanish: [ˈpaβlo neˈɾuða]), was a Chilean poet-diplomat and politician. Neruda became known as a poet when he was 13 years old, and wrote in a variety of styles, including surrealist poems, historical epics, overtly political manifestos, a prose a,utobiography, and passionate love poems such as the ones in his collection Twenty Love Poems and a Song of Despair (1924). He won the Nobel Prize for Literature in 1971."
-  )
-
-Poet.create(
-  name: "C.P. Cavafy",
-  year_of_birth: 1863,
-  biography: "Constantine Peter Cavafy (/kəˈvɑːfɪ/; also known as Konstantin or Konstantinos Petrou Kavafis; Greek: Κωνσταντίνος Π. Καβάφης; April 29 (April 17, OS), 1863 – April 29, 1933) was an Egyptian Greek poet, journalist and civil servant. His consciously individual style earned him a place among the most important figures not only in Greek poetry, but in Western poetry as well.
-
-Cavafy wrote 154 poems, while dozens more remained incomplete or in sketch form. During his lifetime, he consistently refused to formally publish his work and preferred to share it through local newspapers and magazines, or even print it out himself and give it away to anyone interested. His most important poems were written after his fortieth birthday, and officially published two years after his death."
-  )
-
-Poet.create(
-  name: "Sylvia Plath",
-  year_of_birth: 1932,
-  biography: "Sylvia Plath (/plæθ/; October 27, 1932 – February 11, 1963) was an American poet, novelist, and short-story writer. Born in Boston, she studied at Smith College and Newnham College at the University of Cambridge before receiving acclaim as a poet and writer. She married fellow poet Ted Hughes in 1956, and they lived together in the United States and then in England. They had two children, Frieda and Nicholas, before separating in 1962.
-
-Plath was clinically depressed for most of her adult life, and was treated multiple times with electroconvulsive therapy (ECT). She committed suicide in 1963.
-
-Plath is credited with advancing the genre of confessional poetry and is best known for two of her published collections, The Colossus and Other Poems and Ariel, and The Bell Jar, a semi-autobiographical novel published shortly before her death. In 1982, she won a posthumous Pulitzer Prize for The Collected Poems."
-
-  )
-
-Poet.create(
-  name: "Stevie Smith",
-  year_of_birth: 1902,
-  biography: "Smith's first volume of poetry, the self-illustrated A Good Time Was Had By All, was published in 1937 and established her as a poet. Soon her poems were found in periodicals. Her style was often very dark; her characters were perpetually saying 'goodbye' to their friends or welcoming death. At the same time her work has an eerie levity and can be very funny though it is neither light nor whimsical. 'Stevie Smith often uses the word 'peculiar' and it is the best word to describe her effects' (Hermione Lee). She was never sentimental, undercutting any pathetic effects with the ruthless honesty of her humour.
-
-'A good time was had by all' itself became a catch phrase, still occasionally used to this day. Smith said she got the phrase from parish magazines, where descriptions of church picnics often included this phrase. This saying has become so familiar that it is recognised even by those who are unaware of its origin. Variations appear in pop culture, including 'Being for the Benefit of Mr. Kite!' by the Beatles.
-
-Though her poems were remarkably consistent in tone and quality throughout her life, their subject matter changed over time, with less of the outrageous wit of her youth and more reflection on suffering, faith and the end of life. Her best-known poem is 'Not Waving but Drowning'. She was awarded the Cholmondeley Award for Poets in 1966 and won the Queen's Gold Medal for poetry in 1969. She published nine volumes of poems in her lifetime (three more were released posthumously)."
-  )
-
-Poet.create(
-  name: "Langston Hughes",
-  year_of_birth: 1902,
-  biography: "James Mercer Langston Hughes (February 1, 1902 – May 22, 1967) was an American poet, social activist, novelist, playwright, and columnist from Joplin, Missouri.
-
-He was one of the earliest innovators of the then-new literary art form called jazz poetry. Hughes is best known as a leader of the Harlem Renaissance in New York City. He famously wrote about the period that 'the negro was in vogue', which was later paraphrased as 'when Harlem was in vogue'."
-  )
-
-Poet.create(
-  name: "Derek Walcott",
-  year_of_birth: 1930,
-  biography: "Sir Derek Alton Walcott, KCSL, OBE, OCC (23 January 1930 – 17 March 2017) was a Saint Lucian poet and playwright. He received the 1992 Nobel Prize in Literature. He was the University of Alberta's first distinguished scholar in residence, where he taught undergraduate and graduate writing courses. He also served as Professor of Poetry at the University of Essex from 2010 to 2013. His works include the Homeric epic poem Omeros (1990), which many critics view 'as Walcott's major achievement.' In addition to winning the Nobel Prize, Walcott received many literary awards over the course of his career, including an Obie Award in 1971 for his play Dream on Monkey Mountain, a MacArthur Foundation 'genius' award, a Royal Society of Literature Award, the Queen's Medal for Poetry, the inaugural OCM Bocas Prize for Caribbean Literature, the 2011 T. S. Eliot Prize for his book of poetry White Egrets and the Griffin Trust For Excellence In Poetry Lifetime Recognition Award in 2015."
-  )
-
-Poet.create(
-  name: "W.B. Yeats",
-  year_of_birth: 1865,
-  biography: "William Butler Yeats[a] (13 June 1865 – 28 January 1939) was an Irish poet and one of the foremost figures of 20th-century literature. A pillar of both the Irish and British literary establishments, he helped to found the Abbey Theatre, and in his later years served as an Irish Senator for two terms. Yeats was a driving force behind the Irish Literary Revival along with Lady Gregory, Edward Martyn and others.
-
-He was born in Sandymount, Ireland and educated there and in London. He spent childhood holidays in County Sligo and studied poetry from an early age when he became fascinated by Irish legends and the occult. These topics feature in the first phase of his work, which lasted roughly until the turn of the 20th century. His earliest volume of verse was published in 1889, and its slow-paced and lyrical poems display Yeats's debts to Edmund Spenser, Percy Bysshe Shelley, and the poets of the Pre-Raphaelite Brotherhood. From 1900, his poetry grew more physical and realistic. He largely renounced the transcendental beliefs of his youth, though he remained preoccupied with physical and spiritual masks, as well as with cyclical theories of life. In 1923, he was awarded the Nobel Prize in Literature."
-  )
-
-Poet.create(
-  name: "Czeslaw Milosz",
-  year_of_birth: 1911,
-  biography: "Czesław Miłosz ([ˈt͡ʂɛswaf ˈmiwɔʂ] (About this sound listen); 30 June 1911 – 14 August 2004) was a Polish poet, prose writer, translator and diplomat. His World War II-era sequence The World is a collection of twenty 'naïve' poems. Following the war, he served as Polish cultural attaché in Paris and Washington, D.C., then in 1951 defected to the West. His nonfiction book The Captive Mind (1953) became a classic of anti-Stalinism. From 1961 to 1998 he was a professor of Slavic Languages and Literatures at the University of California, Berkeley.
-
-He became a U.S. citizen in 1970. In 1978 he was awarded the Neustadt International Prize for Literature, and in 1980 the Nobel Prize in Literature. In 1999 he was named a Puterbaugh Fellow. After the fall of the Iron Curtain, he divided his time between Berkeley, California, and Kraków, Poland."
-  )
-
-Poet.create(
-  name: "Robert Bly",
-  year_of_birth: 1926,
-  biography: "Robert Bly (born December 23, 1926) is an American poet, essayist, activist, and leader of the mythopoetic men's movement. His most commercially successful book to date was Iron John: A Book About Men (1990), a key text of the mythopoetic men's movement, which spent 62 weeks on The New York Times Best Seller list. He won the 1968 National Book Award for Poetry for his book The Light Around the Body."
-  )
-
-puts "poets created"
-
-puts "creating poems"
 
 Poem.create(
   title: "High Windows",
@@ -247,6 +73,13 @@ Categorisation.create(
   category_id: 19
   )
 
+puts "creating Louis MacNeice"
+Poet.create(
+  name: "Louis MacNeice",
+  year_of_birth: 1907,
+  biography: "Frederick Louis MacNeice CBE (12 September 1907 – 3 September 1963) was an Irish poet and playwright. He was part of the generation of the Auden Group that included W. H. Auden, Stephen Spender and Cecil Day-Lewis. MacNeice's body of work was widely appreciated by the public during his lifetime, due in part to his relaxed, but socially and emotionally aware style. Never as overtly (or simplistically) political as some of his contemporaries, his work shows a humane opposition to totalitarianism as well as an acute awareness of his Irish roots."
+  )
+
 Poem.create(
   title: "Snow",
   poet_id: 2,
@@ -272,6 +105,13 @@ Categorisation.create(
   category_id: 21
   )
 
+Poet.create(
+  name: "Pablo Neruda",
+  year_of_birth: 1904,
+  biography: "Ricardo Eliécer Neftalí Reyes Basoalto (12 July 1904 – 23 September 1973), better known by his pen name and, later, legal name Pablo Neruda (/nəˈruːdə/;[1] Spanish: [ˈpaβlo neˈɾuða]), was a Chilean poet-diplomat and politician. Neruda became known as a poet when he was 13 years old, and wrote in a variety of styles, including surrealist poems, historical epics, overtly political manifestos, a prose a,utobiography, and passionate love poems such as the ones in his collection Twenty Love Poems and a Song of Despair (1924). He won the Nobel Prize for Literature in 1971."
+  )
+
+puts "creating Pablo Neruda"
 Poem.create(
   title: "LXXXIX",
   poet_id: 3,
@@ -303,6 +143,15 @@ Categorisation.create(
 Categorisation.create(
   poem_id: 3,
   category_id: 4
+  )
+
+puts "creating C.P. Cavafy"
+Poet.create(
+  name: "C.P. Cavafy",
+  year_of_birth: 1863,
+  biography: "Constantine Peter Cavafy (/kəˈvɑːfɪ/; also known as Konstantin or Konstantinos Petrou Kavafis; Greek: Κωνσταντίνος Π. Καβάφης; April 29 (April 17, OS), 1863 – April 29, 1933) was an Egyptian Greek poet, journalist and civil servant. His consciously individual style earned him a place among the most important figures not only in Greek poetry, but in Western poetry as well.
+
+Cavafy wrote 154 poems, while dozens more remained incomplete or in sketch form. During his lifetime, he consistently refused to formally publish his work and preferred to share it through local newspapers and magazines, or even print it out himself and give it away to anyone interested. His most important poems were written after his fortieth birthday, and officially published two years after his death."
   )
 
 Poem.create(
@@ -365,6 +214,18 @@ Categorisation.create(
 Categorisation.create(
   poem_id: 4,
   category_id: 10
+  )
+
+puts "creating Sylvia Plath"
+Poet.create(
+  name: "Sylvia Plath",
+  year_of_birth: 1932,
+  biography: "Sylvia Plath (/plæθ/; October 27, 1932 – February 11, 1963) was an American poet, novelist, and short-story writer. Born in Boston, she studied at Smith College and Newnham College at the University of Cambridge before receiving acclaim as a poet and writer. She married fellow poet Ted Hughes in 1956, and they lived together in the United States and then in England. They had two children, Frieda and Nicholas, before separating in 1962.
+
+Plath was clinically depressed for most of her adult life, and was treated multiple times with electroconvulsive therapy (ECT). She committed suicide in 1963.
+
+Plath is credited with advancing the genre of confessional poetry and is best known for two of her published collections, The Colossus and Other Poems and Ariel, and The Bell Jar, a semi-autobiographical novel published shortly before her death. In 1982, she won a posthumous Pulitzer Prize for The Collected Poems."
+
   )
 
 Poem.create(
@@ -454,6 +315,17 @@ Categorisation.create(
   category_id: 12
   )
 
+puts "creating Stevie Smith"
+Poet.create(
+  name: "Stevie Smith",
+  year_of_birth: 1902,
+  biography: "Smith's first volume of poetry, the self-illustrated A Good Time Was Had By All, was published in 1937 and established her as a poet. Soon her poems were found in periodicals. Her style was often very dark; her characters were perpetually saying 'goodbye' to their friends or welcoming death. At the same time her work has an eerie levity and can be very funny though it is neither light nor whimsical. 'Stevie Smith often uses the word 'peculiar' and it is the best word to describe her effects' (Hermione Lee). She was never sentimental, undercutting any pathetic effects with the ruthless honesty of her humour.
+
+'A good time was had by all' itself became a catch phrase, still occasionally used to this day. Smith said she got the phrase from parish magazines, where descriptions of church picnics often included this phrase. This saying has become so familiar that it is recognised even by those who are unaware of its origin. Variations appear in pop culture, including 'Being for the Benefit of Mr. Kite!' by the Beatles.
+
+Though her poems were remarkably consistent in tone and quality throughout her life, their subject matter changed over time, with less of the outrageous wit of her youth and more reflection on suffering, faith and the end of life. Her best-known poem is 'Not Waving but Drowning'. She was awarded the Cholmondeley Award for Poets in 1966 and won the Queen's Gold Medal for poetry in 1969. She published nine volumes of poems in her lifetime (three more were released posthumously)."
+  )
+
 Poem.create(
   title: "Not Waving, But Drowning",
   poet_id: 6,
@@ -482,6 +354,15 @@ Categorisation.create(
 Categorisation.create(
   poem_id: 6,
   category_id: 1
+  )
+
+puts "creating Langston Hughes"
+Poet.create(
+  name: "Langston Hughes",
+  year_of_birth: 1902,
+  biography: "James Mercer Langston Hughes (February 1, 1902 – May 22, 1967) was an American poet, social activist, novelist, playwright, and columnist from Joplin, Missouri.
+
+He was one of the earliest innovators of the then-new literary art form called jazz poetry. Hughes is best known as a leader of the Harlem Renaissance in New York City. He famously wrote about the period that 'the negro was in vogue', which was later paraphrased as 'when Harlem was in vogue'."
   )
 
 Poem.create(
@@ -520,6 +401,13 @@ Categorisation.create(
 Categorisation.create(
   poem_id: 7,
   category_id: 22
+  )
+
+puts "creating Derek Walcott"
+Poet.create(
+  name: "Derek Walcott",
+  year_of_birth: 1930,
+  biography: "Sir Derek Alton Walcott, KCSL, OBE, OCC (23 January 1930 – 17 March 2017) was a Saint Lucian poet and playwright. He received the 1992 Nobel Prize in Literature. He was the University of Alberta's first distinguished scholar in residence, where he taught undergraduate and graduate writing courses. He also served as Professor of Poetry at the University of Essex from 2010 to 2013. His works include the Homeric epic poem Omeros (1990), which many critics view 'as Walcott's major achievement.' In addition to winning the Nobel Prize, Walcott received many literary awards over the course of his career, including an Obie Award in 1971 for his play Dream on Monkey Mountain, a MacArthur Foundation 'genius' award, a Royal Society of Literature Award, the Queen's Medal for Poetry, the inaugural OCM Bocas Prize for Caribbean Literature, the 2011 T. S. Eliot Prize for his book of poetry White Egrets and the Griffin Trust For Excellence In Poetry Lifetime Recognition Award in 2015."
   )
 
 Poem.create(
@@ -569,6 +457,15 @@ Categorisation.create(
 Categorisation.create(
   poem_id: 8,
   category_id: 10
+  )
+
+puts "creating W.B. Yeats"
+Poet.create(
+  name: "W.B. Yeats",
+  year_of_birth: 1865,
+  biography: "William Butler Yeats[a] (13 June 1865 – 28 January 1939) was an Irish poet and one of the foremost figures of 20th-century literature. A pillar of both the Irish and British literary establishments, he helped to found the Abbey Theatre, and in his later years served as an Irish Senator for two terms. Yeats was a driving force behind the Irish Literary Revival along with Lady Gregory, Edward Martyn and others.
+
+He was born in Sandymount, Ireland and educated there and in London. He spent childhood holidays in County Sligo and studied poetry from an early age when he became fascinated by Irish legends and the occult. These topics feature in the first phase of his work, which lasted roughly until the turn of the 20th century. His earliest volume of verse was published in 1889, and its slow-paced and lyrical poems display Yeats's debts to Edmund Spenser, Percy Bysshe Shelley, and the poets of the Pre-Raphaelite Brotherhood. From 1900, his poetry grew more physical and realistic. He largely renounced the transcendental beliefs of his youth, though he remained preoccupied with physical and spiritual masks, as well as with cyclical theories of life. In 1923, he was awarded the Nobel Prize in Literature."
   )
 
 Poem.create(
@@ -622,6 +519,15 @@ Categorisation.create(
   category_id: 22
   )
 
+puts "creating Czeslaw Milosz"
+Poet.create(
+  name: "Czeslaw Milosz",
+  year_of_birth: 1911,
+  biography: "Czesław Miłosz ([ˈt͡ʂɛswaf ˈmiwɔʂ] (About this sound listen); 30 June 1911 – 14 August 2004) was a Polish poet, prose writer, translator and diplomat. His World War II-era sequence The World is a collection of twenty 'naïve' poems. Following the war, he served as Polish cultural attaché in Paris and Washington, D.C., then in 1951 defected to the West. His nonfiction book The Captive Mind (1953) became a classic of anti-Stalinism. From 1961 to 1998 he was a professor of Slavic Languages and Literatures at the University of California, Berkeley.
+
+He became a U.S. citizen in 1970. In 1978 he was awarded the Neustadt International Prize for Literature, and in 1980 the Nobel Prize in Literature. In 1999 he was named a Puterbaugh Fellow. After the fall of the Iron Curtain, he divided his time between Berkeley, California, and Kraków, Poland."
+  )
+
 Poem.create(
   title: "Love",
   poet_id: 10,
@@ -652,6 +558,13 @@ Categorisation.create(
 Categorisation.create(
   poem_id: 10,
   category_id: 9
+  )
+
+puts "creating Robert Bly"
+Poet.create(
+  name: "Robert Bly",
+  year_of_birth: 1926,
+  biography: "Robert Bly (born December 23, 1926) is an American poet, essayist, activist, and leader of the mythopoetic men's movement. His most commercially successful book to date was Iron John: A Book About Men (1990), a key text of the mythopoetic men's movement, which spent 62 weeks on The New York Times Best Seller list. He won the 1968 National Book Award for Poetry for his book The Light Around the Body."
   )
 
 Poem.create(
@@ -690,3 +603,93 @@ Categorisation.create(
 
 puts "poems created"
 
+
+
+# def scrape_poetry_foundation
+# #   # title_array = []
+# #   # body_array = []
+# #   poet_array = []
+#   file = 'poems.json'
+#   poem_serialized = open(file).read
+#   poems = JSON.parse(poem_serialized)
+
+  # keyword_array = []
+  # poems.first(100).each do |poem_hash|
+  #   keyword_array << poem_hash["keywords"]
+  # end
+
+
+  # potential_categories = ["Eating", "Drinking", "Religion", "The Spiritual", "Activities", "Eating", "Drinking", "Social Commentaries", "Class", "Activities", "Indoor Activities", "Relationships", "Home Life", "Arts", "Sciences", "Architecture", "Design", "Activities", "Jobs", "Working", "Activities", "Jobs", "Working", "School", "Learning", "Relationships", "Family", "Ancestors", "Arts", "Sciences", "Poetry", "Poets", "Activities", "Jobs", "Working", "Social Commentaries", "Crime", "Punishment", "Activities", "School", "Learning", "Social Commentaries", "Crime", "Punishment", "Activities", "Sports", "Outdoor Activities", "Activities", "Travels", "Journeys", "Arts", "Sciences", "Humor", "Satire", "Social Commentaries", "Class", "Crime", "Punishment", "History", "Politics", "Money", "Economics", "Popular Culture", "Race", "Ethnicity", "Arts", "Sciences", "Language", "Linguistics", "Arts", "Sciences", "Language", "Linguistics", "Poetry", "Poets", "Living", "Birth", "Birthdays", "The Body", "Living", "Coming of Age", "Activities", "Gardening", "Living", "Coming of Age", "Life Choices", "Relationships", "Family", "Ancestors", "Living", "Death", "Living", "Death", "Relationships", "Family", "Ancestors", "Religion", "Judaism", "Arts", "Sciences", "Language", "Linguistics", "Social Commentaries", "History", "Politics", "Living", "Death", "The Mind", "Relationships", "Family", "Ancestors", "Religion", "Judaism", "Social Commentaries", "History", "Politics", "Living", "Growing Old", "Living", "Health", "Illness", "Living", "Life Choices", "Living", "Life Choices", "Relationships", "Family", "Ancestors", "Living", "Life Choices", "Relationships", "Friends", "Enemies", "Arts", "Sciences", "Music", "Living", "Life Choices", "The Body", "Living", "Marriage", "Companionship", "Romantic Love", "Social Commentaries", "War", "Conflict", "Living", "Sorrow", "Grieving", "Living", "Sorrow", "Grieving", "The Mind", "Love", "Heartache", "Loss", "Living", "The Body", "Love", "Desire", "Arts", "Sciences", "Poetry", "Poets", "Living", "The Body", "The Mind", "Living", "The Mind", "Relationships", "Family", "Ancestors", "Social Commentaries", "History", "Politics", "Living", "Youth", "Social Commentaries", "Race", "Ethnicity", "War", "Conflict", "Love", "Desire", "Arts", "Sciences", "Poetry", "Poets", "Love", "Desire", "Romantic Love", "Love", "Unrequited Love", "Nature", "Animals", "Relationships", "Family", "Ancestors", "Relationships", "Family", "Ancestors", "Arts", "Sciences", "Humor", "Satire", "Language", "Linguistics", "Music", "Relationships", "Family", "Ancestors", "Arts", "Sciences", "Music", "Theater", "Dance", "Social Commentaries", "Popular Culture", "Race", "Ethnicity", "Relationships", "Family", "Ancestors", "Friends", "Enemies", "Relationships", "Men", "Women", "Social Commentaries", "Gender", "Sexuality", "Religion", "The Spiritual", "Social Commentaries", "Cities", "Urban Life", "Social Commentaries", "Cities", "Urban Life", "Race", "Ethnicity", "Social Commentaries", "History", "Politics", "Social Commentaries", "History", "Politics", "Race", "Ethnicity", "Social Commentaries", "History", "Politics", "War", "Conflict", "Social Commentaries", "War", "Conflict"]
+  # puts potential_categories.uniq.sort
+
+#   poet_name_array.each do |poet|
+#     # Poet.create(
+#     #   name: poet
+#     # )
+#   end
+
+  # Create the poem
+  # poems_body_array = []
+  # poems.each do |poem_hash|
+  #   poem_body = poem_hash["body"]
+
+  # end
+
+  # poet_id_array = []
+  # poems.each do |poem_hash|
+  #   poet_id = Poet.find_by_name(poem_hash["poet"])
+
+  #   # Poem.create(
+  #   #   poet_id: poet_id,
+  #   #   poem)
+  # end
+  # puts poet_id_array
+
+  # puts poems_body_array[0]
+  # puts poems_body_array[1]
+
+  # getting list of all poets (unique)
+  # Insert all of them in the database
+  # read all the poems, read the poems
+  # for every poem, you find_by_name author => poet_id
+  # insert poem
+
+
+
+
+  # poems_poets = []
+  # new_poems_array.each do |poem|
+  #   poems_poets << poem["poet"]
+  # end
+
+  # poet_hash_array
+
+  # poet_hash = Hash.new
+  # poet_hash_array = []
+  # poet_name_array.each_with_index do |x, index|
+  #   new_poet = {x => index + 1}
+  #   poet_hash_array << new_poet
+  # end
+  # This creates an array of poet hashes, where each poet corresponds to a number
+
+
+  # poems.each do |poem|
+  #   poem["poet"].gsub { |}
+
+  # new_poems_array = poems.sort_by { |poem_hash| poem_hash["poet"] }
+  # This sorts the JSON by the alpahetical order of poets
+
+  # Create an array of all the poets in alphabetical order
+  # Use the index (+1) of those poets to give the poet_id of each poet
+  # Use a .match method to say where two poet names are the same
+  # When there is a match then gsub the idea
+  #     title: poem_hash["title"]
+
+  #     )
+  #     title_array << poem_hash["title"]
+  #     body_array << poem_hash["text"]
+  # end
+  # return title_array
+# end
+
+# puts scrape_poetry_foundation
