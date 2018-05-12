@@ -4,11 +4,9 @@
   <div class="categorisation_section">
     <h3><%= category.name %></h3>
     <% category.poems.each do |poem| %>
-    <ul>
-      <li><%= poem.title %></li>
-      <li><%= poem.body.lines.first %></li>
-      <%= link_to "Read Poem", poem_path(poem) %>
-    </ul>
+      <p>
+      <%= link_to poem_path(poem) do %><%= poem.title %><% end %> by <%= poem.poet.name %>
+      </p>
     <% end %>
   </div>
 <% end %>

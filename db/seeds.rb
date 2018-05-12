@@ -2,22 +2,25 @@ require 'json'
 require 'open-uri'
 
 puts 'Cleaning database...'
-# Poem.destroy_all
-# Poet.destroy_all
+Categorisation.destroy_all
+Category.destroy_all
+Poem.destroy_all
+Poet.destroy_all
 
 puts 'Creating categories'
-
-[]
 
 puts 'Creating poets'
 
 puts "creating categories"
 
-categories = ["Time & Change", "Happiness & Joy" "Identity", "New Beginnings", "Family & Home", "Youth & Coming of Age", "Lust & Sexuality", "Nature & Seasons", "Fear", "Friendship", "Forgiveness & Atonement", "Death & Loss", "Travel & Adventure", "Spirituality", "Peace & Calm", "Conflict & Struggle", "Amusement & Satire", "Loneliness & Depression", "Inspiration & Hope", "Arts & Culture", "Politics & History", "Social Commentary", "Love & Admiration"]
+categories = ["Time & Change", "Happiness & Joy", "Identity", "New Beginnings", "Family & Home", "Youth & Coming of Age", "Lust & Sexuality", "Nature & Seasons", "Fear", "Friendship", "Forgiveness & Atonement", "Death & Loss", "Travel & Adventure", "Spirituality", "Peace & Calm", "Conflict & Struggle", "Amusement & Satire", "Loneliness & Depression", "Inspiration & Hope", "Arts & Culture", "Politics & History", "Social Commentary", "Love & Admiration"]
 categories.sort.each do |category|
-  puts category
   Category.create(name: category)
 end
+Category.create(name: "Growing Old")
+Category.create(name: "Solitude & Atonement")
+
+puts "Categories created"
 
 puts "creating Philip Larkin"
 Poet.create(
@@ -58,20 +61,9 @@ And beyond it, the deep blue air, that shows
 Nothing, and is nowhere, and is endless."
  )
 
-Categorisation.create(
-  poem_id: 1,
-  category_id: 20
-  )
-
-Categorisation.create(
-  poem_id: 1,
-  category_id: 9
-  )
-
-Categorisation.create(
-  poem_id: 1,
-  category_id: 19
-  )
+Categorisation.create(poem_id: 1,category_id: 20)
+Categorisation.create(poem_id: 1,category_id: 9)
+Categorisation.create(poem_id: 1,category_id: 19)
 
 puts "creating Louis MacNeice"
 Poet.create(
@@ -100,10 +92,7 @@ On the tongue on the eyes on the ears in the palms of one's hands—
 There is more than glass between the snow and the huge roses."
   )
 
-Categorisation.create(
-  poem_id: 2,
-  category_id: 21
-  )
+Categorisation.create(poem_id: 2, category_id: 21)
 
 Poet.create(
   name: "Pablo Neruda",
@@ -135,15 +124,8 @@ so that my shadow can travel along in your hair,
 so that everything can learn the reason for my song."
   )
 
-Categorisation.create(
-  poem_id: 3,
-  category_id: 13
-  )
-
-Categorisation.create(
-  poem_id: 3,
-  category_id: 4
-  )
+Categorisation.create(poem_id: 3,category_id: 13)
+Categorisation.create(poem_id: 3,category_id: 4)
 
 puts "creating C.P. Cavafy"
 Poet.create(
@@ -201,20 +183,9 @@ Wise as you will have become, so full of experience,
 you will have understood by then what these Ithakas mean."
   )
 
-Categorisation.create(
-  poem_id: 4,
-  category_id: 22
-  )
-
-Categorisation.create(
-  poem_id: 4,
-  category_id: 21
-  )
-
-Categorisation.create(
-  poem_id: 4,
-  category_id: 10
-  )
+Categorisation.create(poem_id: 4,category_id: 22)
+Categorisation.create(poem_id: 4,category_id: 21)
+Categorisation.create(poem_id: 4,category_id: 10)
 
 puts "creating Sylvia Plath"
 Poet.create(
@@ -305,15 +276,8 @@ The water I taste is warm and salt, like the sea,
 And comes from a country far away as health."
   )
 
-Categorisation.create(
-  poem_id: 5,
-  category_id: 10
-  )
-
-Categorisation.create(
-  poem_id: 5,
-  category_id: 12
-  )
+Categorisation.create(poem_id: 5,category_id: 10)
+Categorisation.create(poem_id: 5,category_id: 12)
 
 puts "creating Stevie Smith"
 Poet.create(
@@ -346,15 +310,8 @@ I was much too far out all my life
 And not waving but drowning."
   )
 
-Categorisation.create(
-  poem_id: 6,
-  category_id: 12
-  )
-
-Categorisation.create(
-  poem_id: 6,
-  category_id: 1
-  )
+Categorisation.create(poem_id: 6,category_id: 12)
+Categorisation.create(poem_id: 6,category_id: 1)
 
 puts "creating Langston Hughes"
 Poet.create(
@@ -388,20 +345,9 @@ Ancient, dusky rivers.
 My soul has grown deep like the rivers."
   )
 
-Categorisation.create(
-  poem_id: 7,
-  category_id: 19
-  )
-
-Categorisation.create(
-  poem_id: 7,
-  category_id: 10
-  )
-
-Categorisation.create(
-  poem_id: 7,
-  category_id: 22
-  )
+Categorisation.create(poem_id: 7,category_id: 19)
+Categorisation.create(poem_id: 7,category_id: 10)
+Categorisation.create(poem_id: 7,category_id: 22)
 
 puts "creating Derek Walcott"
 Poet.create(
@@ -434,30 +380,11 @@ peel your own image from the mirror.
 Sit. Feast on your life. "
   )
 
-Categorisation.create(
-  poem_id: 8,
-  category_id: 13
-  )
-
-Categorisation.create(
-  poem_id: 8,
-  category_id: 7
-  )
-
-Categorisation.create(
-  poem_id: 8,
-  category_id: 16
-  )
-
-Categorisation.create(
-  poem_id: 8,
-  category_id: 21
-  )
-
-Categorisation.create(
-  poem_id: 8,
-  category_id: 10
-  )
+Categorisation.create(poem_id: 8,category_id: 13)
+Categorisation.create(poem_id: 8,category_id: 7)
+Categorisation.create(poem_id: 8,category_id: 16)
+Categorisation.create(poem_id: 8,category_id: 21)
+Categorisation.create(poem_id: 8,category_id: 10)
 
 puts "creating W.B. Yeats"
 Poet.create(
@@ -509,15 +436,8 @@ To lords and ladies of Byzantium
 Of what is past, or passing, or to come."
   )
 
-Categorisation.create(
-  poem_id: 9,
-  category_id: 21
-  )
-
-Categorisation.create(
-  poem_id: 9,
-  category_id: 22
-  )
+Categorisation.create(poem_id: 9,category_id: 21)
+Categorisation.create(poem_id: 9,category_id: 22)
 
 puts "creating Czeslaw Milosz"
 Poet.create(
@@ -545,20 +465,9 @@ It doesn’t matter whether he knows what he serves:
 Who serves best doesn’t always understand."
   )
 
-Categorisation.create(
-  poem_id: 10,
-  category_id: 13
-  )
-
-Categorisation.create(
-  poem_id: 10,
-  category_id: 10
-  )
-
-Categorisation.create(
-  poem_id: 10,
-  category_id: 9
-  )
+Categorisation.create(poem_id: 10,category_id: 13)
+Categorisation.create(poem_id: 10,category_id: 10)
+Categorisation.create(poem_id: 10,category_id: 9)
 
 puts "creating Robert Bly"
 Poet.create(
@@ -591,15 +500,788 @@ As they breathe they feed someone we do not know,
 Someone we know of, whom we have never seen."
   )
 
-Categorisation.create(
-  poem_id: 11,
-  category_id: 13
+Categorisation.create(poem_id: 11,category_id: 13)
+Categorisation.create(poem_id: 11,category_id: 8)
+
+Poem.create(
+  title: "Wants",
+  poet_id: 1,
+  body: "Beyond all this, the wish to be alone:
+However the sky grows dark with invitation-cards
+However we follow the printed directions of sex
+However the family is photographed under the flag-staff -
+Beyond all this, the wish to be alone.
+
+Beneath it all, the desire for oblivion runs:
+Despite the artful tensions of the calendar,
+The life insurance, the tabled fertility rites,
+The costly aversion of the eyes away from death -
+Beneath it all, the desire for oblivion runs."
+)
+
+Categorisation.create(poem_id: 12,category_id: 12)
+Categorisation.create(poem_id: 12,category_id: 17)
+
+
+
+Poem.create(
+  title: "Days",
+  poet_id: 1,
+  body: "What are days for?
+Days are where we live.
+They come, they wake us
+Time and time over.
+They are to be happy in:
+Where can we live but days?
+
+Ah, solving that question
+Brings the priest and the doctor
+In their long coats
+Running over the fields."
+)
+
+Categorisation.create(poem_id: 13,category_id: 21)
+Categorisation.create(poem_id: 13,category_id: 24)
+
+
+Poem.create(
+  title: "Vers de Société",
+  poet_id: 1,
+  body: "My wife and I have asked a crowd of craps
+To come and waste their time and ours: perhaps
+You’d care to join us? In a pig’s arse, friend.
+Day comes to an end.
+The gas fire breathes, the trees are darkly swayed.
+And so Dear Warlock-Williams: I’m afraid—
+
+Funny how hard it is to be alone.
+I could spend half my evenings, if I wanted,
+Holding a glass of washing sherry, canted
+Over to catch the drivel of some bitch
+Who’s read nothing but Which;
+Just think of all the spare time that has flown
+
+Straight into nothingness by being filled
+With forks and faces, rather than repaid
+Under a lamp, hearing the noise of wind,
+And looking out to see the moon thinned
+To an air-sharpened blade.
+A life, and yet how sternly it’s instilled
+
+All solitude is selfish. No one now
+Believes the hermit with his gown and dish
+Talking to God (who’s gone too); the big wish
+Is to have people nice to you, which means
+Doing it back somehow.
+Virtue is social. Are, then, these routines
+
+Playing at goodness, like going to church?
+Something that bores us, something we don’t do well
+(Asking that ass about his fool research)
+But try to feel, because, however crudely,
+It shows us what should be?
+Too subtle, that. Too decent, too. Oh hell,
+
+Only the young can be alone freely.
+The time is shorter now for company,
+And sitting by a lamp more often brings
+Not peace, but other things.
+Beyond the light stand failure and remorse
+Whispering Dear Warlock-Williams: Why, of course—"
+)
+
+Categorisation.create(poem_id: 14,category_id: 25)
+Categorisation.create(poem_id: 14,category_id: 24)
+Categorisation.create(poem_id: 14,category_id: 19)
+
+
+
+Poem.create(
+  title: "Sad Steps",
+  poet_id: 1,
+  body: "Groping back to bed after a piss
+I part thick curtains, and am startled by
+The rapid clouds, the moon’s cleanliness.
+
+Four o’clock: wedge-shadowed gardens lie
+Under a cavernous, a wind-picked sky.
+There’s something laughable about this,
+
+The way the moon dashes through clouds that blow
+Loosely as cannon-smoke to stand apart
+(Stone-coloured light sharpening the roofs below)
+
+High and preposterous and separate—
+Lozenge of love! Medallion of art!
+O wolves of memory! Immensements! No,
+
+One shivers slightly, looking up there.
+The hardness and the brightness and the plain
+Far-reaching singleness of that wide stare
+
+Is a reminder of the strength and pain
+Of being young; that it can’t come again,
+But is for others undiminished somewhere."
+)
+
+Categorisation.create(poem_id: 15,category_id: 24)
+Categorisation.create(poem_id: 15,category_id: 25)
+Categorisation.create(poem_id: 15,category_id: 21)
+
+Poem.create(
+  title: "Aubade",
+  poet_id: 1,
+  body: "I work all day, and get half-drunk at night.
+Waking at four to soundless dark, I stare.
+In time the curtain-edges will grow light.
+Till then I see what’s really always there:
+Unresting death, a whole day nearer now,
+Making all thought impossible but how
+And where and when I shall myself die.
+Arid interrogation: yet the dread
+Of dying, and being dead,
+Flashes afresh to hold and horrify.
+
+The mind blanks at the glare. Not in remorse
+—The good not done, the love not given, time
+Torn off unused—nor wretchedly because
+An only life can take so long to climb
+Clear of its wrong beginnings, and may never;
+But at the total emptiness for ever,
+The sure extinction that we travel to
+And shall be lost in always. Not to be here,
+Not to be anywhere,
+And soon; nothing more terrible, nothing more true.
+
+This is a special way of being afraid
+No trick dispels. Religion used to try,
+That vast moth-eaten musical brocade
+Created to pretend we never die,
+And specious stuff that says No rational being
+Can fear a thing it will not feel, not seeing
+That this is what we fear—no sight, no sound,
+No touch or taste or smell, nothing to think with,
+Nothing to love or link with,
+The anaesthetic from which none come round.
+
+And so it stays just on the edge of vision,
+A small unfocused blur, a standing chill
+That slows each impulse down to indecision.
+Most things may never happen: this one will,
+And realisation of it rages out
+In furnace-fear when we are caught without
+People or drink. Courage is no good:
+It means not scaring others. Being brave
+Lets no one off the grave.
+Death is no different whined at than withstood.
+
+Slowly light strengthens, and the room takes shape.
+It stands plain as a wardrobe, what we know,
+Have always known, know that we can’t escape,
+Yet can’t accept. One side will have to go.
+Meanwhile telephones crouch, getting ready to ring
+In locked-up offices, and all the uncaring
+Intricate rented world begins to rouse.
+The sky is white as clay, with no sun.
+Work has to be done.
+Postmen like doctors go from house to house."
   )
 
-Categorisation.create(
-  poem_id: 11,
-  category_id: 8
+Categorisation.create(poem_id: 16,category_id: 4)
+Categorisation.create(poem_id: 16,category_id: 12)
+Categorisation.create(poem_id: 16,category_id: 24)
+
+Poem.create(
+  title: "Entirely",
+  poet_id: 2,
+  body: "If we could get the hang of it entirely
+   It would take too long;
+All we know is the splash of words in passing
+   And falling twigs of song,
+And when we try to eavesdrop on the great
+   Presences it is rarely
+That by a stroke of luck we can appropriate
+   Even a phrase entirely.
+
+If we could find our happiness entirely
+   In somebody else’s arms
+We should not fear the spears of the spring nor the city’s
+   Yammering fire alarms
+But, as it is, the spears each year go through
+   Our flesh and almost hourly
+Bell or siren banishes the blue
+   Eyes of Love entirely.
+
+And if the world were black or white entirely
+   And all the charts were plain
+Instead of a mad weir of tigerish waters,
+   A prism of delight and pain,
+We might be surer where we wished to go
+   Or again we might be merely
+Bored but in brute reality there is no
+   Road that is right entirely."
   )
+
+Categorisation.create(poem_id: 17,category_id: 21)
+Categorisation.create(poem_id: 17,category_id: 9)
+
+
+Poem.create(
+  title: "Prayer Before Birth",
+  poet_id: 2,
+  body: "I am not yet born; O hear me.
+Let not the bloodsucking bat or the rat or the stoat or the
+club-footed ghoul come near me.
+
+I am not yet born, console me.
+I fear that the human race may with tall walls wall me,
+with strong drugs dope me, with wise lies lure me,
+on black racks rack me, in blood-baths roll me.
+
+I am not yet born; provide me
+With water to dandle me, grass to grow for me, trees to talk
+to me, sky to sing to me, birds and a white light
+in the back of my mind to guide me.
+
+I am not yet born; forgive me
+For the sins that in me the world shall commit, my words
+when they speak me, my thoughts when they think me,
+my treason engendered by traitors beyond me,
+my life when they murder by means of my
+hands, my death when they live me.
+
+I am not yet born; rehearse me
+In the parts I must play and the cues I must take when
+old men lecture me, bureaucrats hector me, mountains
+frown at me, lovers laugh at me, the white
+waves call me to folly and the desert calls
+me to doom and the beggar refuses
+my gift and my children curse me.
+
+I am not yet born; O hear me,
+Let not the man who is beast or who thinks he is God
+come near me.
+
+I am not yet born; O fill me
+With strength against those who would freeze my
+humanity, would dragoon me into a lethal automaton,
+would make me a cog in a machine, a thing with
+one face, a thing, and against all those
+who would dissipate my entirety, would
+blow me like thistledown hither and
+thither or hither and thither
+like water held in the
+hands would spill me.
+
+Let them not make me a stone and let them not spill me.
+Otherwise kill me. "
+  )
+
+Categorisation.create(poem_id: 18,category_id: 16)
+Categorisation.create(poem_id: 18,category_id: 5)
+Categorisation.create(poem_id: 18,category_id: 11)
+Categorisation.create(poem_id: 18,category_id: 3)
+Categorisation.create(poem_id: 18,category_id: 5)
+
+
+Poem.create(
+  title: "Night Club",
+  poet_id: 2,
+  body: "After the legshows and the brandies
+And all the pick-me-ups for tired
+Men there is a feeling
+Something more is required.
+
+The lights go down and eyes
+Look up across the room;
+Salome comes in, bearing
+The head of God knows whom."
+  )
+
+Categorisation.create(poem_id: 19,category_id: 12)
+Categorisation.create(poem_id: 19,category_id: 14)
+
+
+Poem.create(
+  title: "Meeting Point",
+  poet_id: 2,
+  body: "Time was away and somewhere else,
+There were two glasses and two chairs
+And two people with the one pulse
+(Somebody stopped the moving stairs):
+Time was away and somewhere else.
+
+And they were neither up nor down;
+The stream’s music did not stop
+Flowing through heather, limpid brown,
+Although they sat in a coffee shop
+And they were neither up nor down.
+
+The bell was silent in the air
+Holding its inverted poise—
+Between the clang and clang a flower,
+A brazen calyx of no noise:
+The bell was silent in the air.
+
+The camels crossed the miles of sand
+That stretched around the cups and plates;
+The desert was their own, they planned
+To portion out the stars and dates:
+The camels crossed the miles of sand.
+
+Time was away and somewhere else.
+The waiter did not come, the clock
+Forgot them and the radio waltz
+Came out like water from a rock:
+Time was away and somewhere else.
+
+Her fingers flicked away the ash
+That bloomed again in tropic trees:
+Not caring if the markets crash
+When they had forests such as these,
+Her fingers flicked away the ash.
+
+God or whatever means the Good
+Be praised that time can stop like this,
+That what the heart has understood
+Can verify in the body’s peace
+God or whatever means the Good.
+
+Time was away and she was here
+And life no longer what it was,
+The bell was silent in the air
+And all the room one glow because
+Time was away and she was here."
+  )
+
+Categorisation.create(poem_id: 20,category_id: 13)
+Categorisation.create(poem_id: 20,category_id: 9)
+Categorisation.create(poem_id: 20,category_id: 17)
+Categorisation.create(poem_id: 20,category_id: 21)
+
+
+Poem.create(
+  title: "Sweetness, Always",
+  poet_id: 3,
+  body: "Why such harsh machinery?
+Why, to write down the stuff and people of everyday,
+must poems be dressed up in gold,
+or in old and fearful stone?
+
+I want verses of felt or feather which scarcely weigh,
+mild verses
+with the intimacy of beds
+where people have loved and dreamed.
+I want poems stained
+by hands and everydayness.
+
+Verses of pastry which melt
+into milk and sugar in the mouth,
+air and water to drink,
+the bites and kisses of love.
+I long for eatable sonnets,
+poems of honey and flour.
+
+Vanity keeps prodding us
+to lift ourselves skyward
+or to make deep and useless
+tunnels underground.
+So we forget the joyous
+love-needs of our bodies.
+We forget about pastries.
+We are not feeding the world.
+
+In Madras a long time since,
+I saw a sugary pyramid,
+a tower of confectionery -
+one level after another,
+and in the construction, rubies,
+and other blushing delights,
+medieval and yellow.
+
+Someone dirtied his hands
+to cook up so much sweetness.
+
+Brother poets from here
+and there, from earth and sky,
+from Medellin, from Veracruz,
+Abyssinia, Antofagasta,
+do you know the recipe for honeycombs?
+
+Let's forget about all that stone.
+
+Let your poetry fill up
+the equinoctial pastry shop
+our mouths long to devour -
+all the children's mouths
+and the poor adults' also.
+Don't go on without seeing,
+relishing, understanding
+all these hearts of sugar.
+
+Don't be afraid of sweetness.
+
+With or without us,
+sweetness will go on living
+and is infinitely alive,
+forever being revived,
+for it's in a man's mouth,
+whether he's eating or singing,
+that sweetness has its place."
+  )
+
+Categorisation.create(poem_id: 21,category_id: 2)
+Categorisation.create(poem_id: 21,category_id: 9)
+
+
+Poem.create(
+  title: "Births",
+  poet_id: 3,
+  body: "We will never have any memory of dying.
+
+We were so patient
+about our being,
+noting down
+the numbers, the days,
+the years and the months,
+the hair, the mouths we kissed,
+but that moment of dying:
+we surrender it without a note,
+we leave it to others as remembrance,
+or we leave it simply to water,
+to water, to air, to time.
+Nor do we even keep
+the memory of our birth,
+though being born was important and fresh;
+and now you don’t even remember one detail,
+you haven’t kept even a branch
+of the first light.
+
+It’s well known that we are born.
+
+It’s well known that in the room
+or in the wood
+or in the hut in the fishermen’s district
+or in the crackling canefields
+there is a very unusual silence,
+a moment solemn as wood,
+and a woman gets ready to give birth.
+
+It’s well known that we were born.
+
+But of the profound jolt
+from not being to existing, to having hands,
+to seeing, to having eyes,
+to eating and crying and overflowing
+and loving and loving and suffering and suffering,
+of that transition or shudder
+of an electric essence that takes on
+one body more, like a living cup,
+and of that disinhabited woman,
+the mother who is left there with her blood
+and her torn fullness,
+and her end and its beginning, and the disorder
+that troubles the pulse, the floor, the blankets
+until everything gathers and adds
+one more knot to the thread of life:
+nothing, there is nothing left in your memory
+of the fierce sea that lifted a wave
+and knocked down a dark apple from the tree.
+
+The only thing you remember is your life."
+)
+
+Categorisation.create(poem_id: 22,category_id: 4)
+Categorisation.create(poem_id: 22,category_id: 16)
+Categorisation.create(poem_id: 22,category_id: 25)
+
+
+
+Poem.create(
+  title: "The City",
+  poet_id: 4,
+  body: "You said: “I’ll go to another country, go to another shore,
+find another city better than this one.
+Whatever I try to do is fated to turn out wrong
+and my heart lies buried like something dead.
+How long can I let my mind moulder in this place?
+Wherever I turn, wherever I look,
+I see the black ruins of my life, here,
+where I’ve spent so many years, wasted them, destroyed them totally.”
+
+You won’t find a new country, won’t find another shore.
+This city will always pursue you.
+You’ll walk the same streets, grow old
+in the same neighborhoods, turn gray in these same houses.
+You’ll always end up in this city. Don’t hope for things elsewhere:
+there’s no ship for you, there’s no road.
+Now that you’ve wasted your life here, in this small corner,
+you’ve destroyed it everywhere in the world."
+  )
+
+Categorisation.create(poem_id: 23,category_id: 22)
+Categorisation.create(poem_id: 23,category_id: 24)
+Categorisation.create(poem_id: 23,category_id: 10)
+
+
+
+Poem.create(
+  title: "Candles",
+  poet_id: 4,
+  body: "Days to come stand in front of us
+like a row of burning candles—
+golden, warm, and vivid candles.
+
+Days gone by fall behind us,
+a gloomy line of burnt-out candles;
+the nearest are still smoking,
+cold, melted, and bent.
+
+I don’t want to look at them: their shape saddens me,
+and it saddens me to remember their original light.
+I look ahead at my burning candles.
+
+I don’t want to turn, don't want to see, terrified
+how quickly that dark line gets longer,
+how quickly one more dead candle joins another."
+  )
+
+Categorisation.create(poem_id: 24,category_id: 21)
+Categorisation.create(poem_id: 24,category_id: 24)
+Categorisation.create(poem_id: 24,category_id: 6)
+
+
+
+Poem.create(
+  title: "Daddy",
+  poet_id: 5,
+  body: "You do not do, you do not do
+Any more, black shoe
+In which I have lived like a foot
+For thirty years, poor and white,
+Barely daring to breathe or Achoo.
+
+Daddy, I have had to kill you.
+You died before I had time——
+Marble-heavy, a bag full of God,
+Ghastly statue with one gray toe
+Big as a Frisco seal
+
+And a head in the freakish Atlantic
+Where it pours bean green over blue
+In the waters off beautiful Nauset.
+I used to pray to recover you.
+Ach, du.
+
+In the German tongue, in the Polish town
+Scraped flat by the roller
+Of wars, wars, wars.
+But the name of the town is common.
+My Polack friend
+
+Says there are a dozen or two.
+So I never could tell where you
+Put your foot, your root,
+I never could talk to you.
+The tongue stuck in my jaw.
+
+It stuck in a barb wire snare.
+Ich, ich, ich, ich,
+I could hardly speak.
+I thought every German was you.
+And the language obscene
+
+An engine, an engine
+Chuffing me off like a Jew.
+A Jew to Dachau, Auschwitz, Belsen.
+I began to talk like a Jew.
+I think I may well be a Jew.
+
+The snows of the Tyrol, the clear beer of Vienna
+Are not very pure or true.
+With my gipsy ancestress and my weird luck
+And my Taroc pack and my Taroc pack
+I may be a bit of a Jew.
+
+I have always been scared of you,
+With your Luftwaffe, your gobbledygoo.
+And your neat mustache
+And your Aryan eye, bright blue.
+Panzer-man, panzer-man, O You——
+
+Not God but a swastika
+So black no sky could squeak through.
+Every woman adores a Fascist,
+The boot in the face, the brute
+Brute heart of a brute like you.
+
+You stand at the blackboard, daddy,
+In the picture I have of you,
+A cleft in your chin instead of your foot
+But no less a devil for that, no not
+Any less the black man who
+
+Bit my pretty red heart in two.
+I was ten when they buried you.
+At twenty I tried to die
+And get back, back, back to you.
+I thought even the bones would do.
+
+But they pulled me out of the sack,
+And they stuck me together with glue.
+And then I knew what to do.
+I made a model of you,
+A man in black with a Meinkampf look
+
+And a love of the rack and the screw.
+And I said I do, I do.
+So daddy, I’m finally through.
+The black telephone’s off at the root,
+The voices just can’t worm through.
+
+If I’ve killed one man, I’ve killed two——
+The vampire who said he was you
+And drank my blood for a year,
+Seven years, if you want to know.
+Daddy, you can lie back now.
+
+There’s a stake in your fat black heart
+And the villagers never liked you.
+They are dancing and stamping on you.
+They always knew it was you.
+Daddy, daddy, you bastard, I’m through."
+  )
+
+Categorisation.create(poem_id: 25,category_id: 5)
+Categorisation.create(poem_id: 25,category_id: 23)
+
+
+Poem.create(
+  title: "The Applicant",
+  poet_id: 5,
+  body: "First, are you our sort of a person?
+Do you wear
+A glass eye, false teeth or a crutch,
+A brace or a hook,
+Rubber breasts or a rubber crotch,
+
+Stitches to show something's missing? No, no? Then
+How can we give you a thing?
+Stop crying.
+Open your hand.
+Empty? Empty. Here is a hand
+
+To fill it and willing
+To bring teacups and roll away headaches
+And do whatever you tell it.
+Will you marry it?
+It is guaranteed
+
+To thumb shut your eyes at the end
+And dissolve of sorrow.
+We make new stock from the salt.
+I notice you are stark naked.
+How about this suit——
+
+Black and stiff, but not a bad fit.
+Will you marry it?
+It is waterproof, shatterproof, proof
+Against fire and bombs through the roof.
+Believe me, they'll bury you in it.
+
+Now your head, excuse me, is empty.
+I have the ticket for that.
+Come here, sweetie, out of the closet.
+Well, what do you think of that?
+Naked as paper to start
+
+But in twenty-five years she'll be silver,
+In fifty, gold.
+A living doll, everywhere you look.
+It can sew, it can cook,
+It can talk, talk, talk.
+
+It works, there is nothing wrong with it.
+You have a hole, it's a poultice.
+You have an eye, it's an image.
+My boy, it's your last resort.
+Will you marry it, marry it, marry it."
+  )
+
+Categorisation.create(poem_id: 26,category_id: 6)
+
+Poem.create(
+  title: "The Reason",
+  poet_id: 6,
+  body: "My life is vile
+         I hate it so
+         I’ll wait awhile
+         And then I’ll go.
+
+         Why wait at all?
+         Hope springs alive,
+         Good may befall
+         I yet may thrive.
+
+It is because I can’t make up my mind
+If God is good, impotent or unkind.
+"
+  )
+
+Categorisation.create(poem_id: 27,category_id: 21)
+Categorisation.create(poem_id: 27,category_id: 6)
+Categorisation.create(poem_id: 27,category_id: 12)
+
+
+
+# Poem.create(
+#   title: "",
+#   poet_id: ,
+#   body: ""
+#   )
+
+# Categorisation.create(poem_id: ,category_id: )
+
+# Poem.create(
+#   title: "",
+#   poet_id: ,
+#   body: ""
+#   )
+
+# Categorisation.create(poem_id: ,category_id: )
+
+# Poem.create(
+#   title: "",
+#   poet_id: ,
+#   body: ""
+#   )
+
+# Categorisation.create(poem_id: ,category_id: )
+
+# Poem.create(
+#   title: "",
+#   poet_id: ,
+#   body: ""
+#   )
+
+# Categorisation.create(poem_id: ,category_id: )
+
+# Poem.create(
+#   title: "",
+#   poet_id: ,
+#   body: ""
+#   )
+
+# Categorisation.create(poem_id: ,category_id: )
+
+# Poem.create(
+#   title: "",
+#   poet_id: ,
+#   body: ""
+#   )
+
+# Categorisation.create(poem_id: ,category_id: )
+
 
 puts "poems created"
 
