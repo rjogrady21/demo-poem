@@ -13,19 +13,73 @@ def scrape_poetry_foundation
   poet_array = []
   file = 'poems.json'
   poem_serialized = open(file).read
-  poem = JSON.parse(poem_serialized)
-  poem.each do |poem_hash|
-    poet_array << poem_hash["author"]
+  poems = JSON.parse(poem_serialized)
+  poems.each do |poem_hash|
+    poet_array << poem_hash["poet"]
   end
   poet_name_array = poet_array.uniq.sort
   poet_name_array.each do |poet|
-    Poet.create(
-      name: poet
-    )
+    # Poet.create(
+    #   name: poet
+    # )
   end
 
+  # Create the poem
+  # poems_body_array = []
+  # poems.each do |poem_hash|
+  #   poem_body = poem_hash["body"]
+
+  # end
+
+  # poet_id_array = []
+  # poems.each do |poem_hash|
+  #   poet_id = Poet.find_by_name(poem_hash["poet"])
+
+  #   # Poem.create(
+  #   #   poet_id: poet_id,
+  #   #   poem)
+  # end
+  # puts poet_id_array
   puts 'Finished creating poets'
 
+  # puts poems_body_array[0]
+  # puts poems_body_array[1]
+
+  # getting list of all poets (unique)
+  # Insert all of them in the database
+  # read all the poems, read the poems
+  # for every poem, you find_by_name author => poet_id
+  # insert poem
+
+
+
+
+  # poems_poets = []
+  # new_poems_array.each do |poem|
+  #   poems_poets << poem["poet"]
+  # end
+
+  # poet_hash_array
+
+  poet_hash = Hash.new
+  poet_hash_array = []
+  poet_name_array.each_with_index do |x, index|
+    new_poet = {x => index + 1}
+    poet_hash_array << new_poet
+  end
+  # This creates an array of poet hashes, where each poet corresponds to a number
+
+
+  # poems.each do |poem|
+  #   poem["poet"].gsub { |}
+
+  # new_poems_array = poems.sort_by { |poem_hash| poem_hash["poet"] }
+  # This sorts the JSON by the alpahetical order of poets
+
+  # Create an array of all the poets in alphabetical order
+  # Use the index (+1) of those poets to give the poet_id of each poet
+  # Use a .match method to say where two poet names are the same
+  # When there is a match then gsub the idea
   #     title: poem_hash["title"]
 
   #     )
